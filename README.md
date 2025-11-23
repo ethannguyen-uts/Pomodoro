@@ -2,8 +2,7 @@
 
 A minimalist, Notion-style Pomodoro timer and task manager designed to help you stay focused and productive. Built with React, TypeScript, and Tailwind CSS.
 
-![Project Screenshot](https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=2072&ixlib=rb-4.0.3)
-*(Note: Replace with an actual screenshot of your app)*
+![Project Screenshot](./src/images/app.png)
 
 ## ✨ Features
 
@@ -34,8 +33,8 @@ A minimalist, Notion-style Pomodoro timer and task manager designed to help you 
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/pomodoro-focus.git
-    cd pomodoro-focus
+    git clone https://github.com/ethannguyen-uts/Pomodoro.git
+    cd Pomodoro
     ```
 
 2.  Install dependencies:
