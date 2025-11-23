@@ -15,7 +15,7 @@ export default function PomodoroTimer(): JSX.Element {
         if (!isActive) {
             setTimeLeft(mode === 'work' ? workDuration * 60 : breakDuration * 60);
         }
-    }, [workDuration, breakDuration, mode, isActive]);
+    }, [workDuration, breakDuration, mode]);
 
     useEffect(() => {
         let interval: number | null = null;
