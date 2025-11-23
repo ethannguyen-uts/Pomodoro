@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext } from 'react';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 
 interface SettingsContextType {
@@ -10,7 +10,7 @@ interface SettingsContextType {
     updateSettings: (settings: Partial<Omit<SettingsContextType, 'updateSettings'>>) => void;
 }
 
-const SettingsContext = createContext<SettingsContextType | undefined>(undefined);
+export const SettingsContext = createContext<SettingsContextType | undefined>(undefined);
 
 export const SettingsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [workDuration, setWorkDuration] = useLocalStorage<number>('workDuration', 25);
@@ -34,10 +34,4 @@ export const SettingsProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     );
 };
 
-export const useSettings = () => {
-    const context = useContext(SettingsContext);
-    if (context === undefined) {
-        throw new Error('useSettings must be used within a SettingsProvider');
-    }
-    return context;
-};
+
